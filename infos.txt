@@ -1,0 +1,14 @@
+Lien vers vers le site de la World Petanque Bowls Federation : https://wpbf-fmbp.org/index.php/fr/
+
+/* Début de mise en place du style pour les écrans plus grands*/
+/* Début de mise en place du style pour les écrans de type PC */
+
+/* .about-wrapper  {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3;
+} */ 
+Dim 23 avr 2023 01:33:43 CEST
+
+Rechercher images d'évenemnts à venir pour la pétanque en régional (Bretagne), national et international
+

@@ -1,0 +1,267 @@
+/* RESET Marie et Sergio */
+body {
+  background-color: antiquewhite;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ /* Mise en place d'un affichage mobile-first */
+header  {
+  background-color: lightpink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5%;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 20%;
+  padding-left: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+nav > ul > li {
+  padding-right: 10px;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: underline;
+}
+
+aside { /* L'historique des rencontres passées ne s'affiche pas sur les petits écrans */
+  display: none;
+}
+
+.wrapper {
+  background: linear-gradient(90deg, antiquewhite, lightgray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-article {
+  width: 99vw;
+  padding-left: 1%;
+}
+
+.about-item-2 {
+  display: none;
+}
+
+p {
+  padding: 1%;
+  width: 100vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+}
+
+.form-bg-color, .about-bg-color {
+  background: linear-gradient(90deg, antiquewhite, lightgray);
+}
+
+.register-form {
+  width: 100vw;
+}
+
+.validate { /* Bouton stylisé à la main pour comparer avec le bouton stylisé en BOOTSTRAP */
+  border-radius: 8px;
+  background-color: green;
+  color: white;
+  height: 38px;
+}
+
+.event-image {
+  width: 100vw;
+  margin-top: 0;
+  margin-bottom: 10%;
+}
+
+.event-text {
+  display: none;
+}
+
+footer {
+  background-color: lightpink;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-item {
+  padding-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-item > ul > li > a:hover {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.sociaux { /* j'ai conscience que cette classe (.sociaux) cible les mêmes éléments que la pseudo classe précédente (.footer-item>ul>li>a:hover) */
+  width: 32px;
+  background-color: #fff;
+  border-radius: 7px;
+  margin-top: 35%;
+  justify-self: center;
+}
+
+.copyleft {
+  text-align: center;
+  transform: rotate(180deg);
+}
+
+/* Début de mise en place du style pour les écrans de type tablette */
+@media screen and (min-width: 768px) and (min-height: 500px) {
+  aside {
+    display: initial;
+  }
+
+  nav > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav > ul > li {
+    margin-bottom: 10px;
+  }
+
+  .wrapper {
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+
+  main {
+    width: 60%;
+  }
+
+  .image-article {
+    width: 90%;
+  }
+
+  p {
+    width: 100%;
+    overflow: visible;
+    text-overflow: initial;
+    white-space: normal ;
+  }  
+  
+  aside {
+    width: 38%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  aside > div {
+    margin: 30px;
+    font-size: 1.5rem;
+  }
+  
+  @media screen and (orientation: landscape) {
+    aside > div {
+      font-weight: bold;
+    }
+
+    .event-image {
+      margin: 0;
+    }
+
+    .event-text {
+      display: inline-block;
+      width: 100vw;
+      overflow: visible;
+      text-overflow:initial;
+      white-space: normal ;
+    }
+  }  
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25%;
+    margin-bottom: 10px;
+  }
+
+  .register-form {
+    width: 50vw;
+  }
+  .about-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .about-item-2 {
+    display: none;
+  }
+}
+/* Début de mise en place du style pour les écrans de type PC */
+
+@media screen and (min-width: 1100px) {
+  p {
+    width: 98vw;
+  }
+
+  .about-item-2 {
+    display:inline-block;
+  }
+
+  .about-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2;
+    grid-template-areas:
+    "about-item-1 about-item-3"
+    "about-item-2 about-item-2";
+  }
+
+  .about-item-1 {
+    grid-area: about-item-1;
+  }
+
+  .about-item-2 {
+    grid-area: about-item-2;
+    margin-left: 30px;
+    margin-bottom: 2%;
+  }
+
+  .about-item-2 > h2, .about-item-3 > h2 {
+    text-align: center;
+    margin-top: 3%;
+  }
+
+  .about-item-3 {
+    grid-area: about-item-3;
+    margin-top: 20px;
+  }
+}
